@@ -1,0 +1,72 @@
+{
+  "kind": "build_request",
+  "title": "Update site branding to 'Yono Store' and retry build/deploy configuration",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-18",
+      "text": "Set the website/app name to \"Yono Store\" across the frontend UI wherever the product name is displayed (e.g., header/brand label, home page hero/title if present, admin area header).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-3"
+        ],
+        "quotes": [
+          "Retry with website name Yono Store"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The primary visible site branding text reads \"Yono Store\" on public pages.",
+        "The primary visible site branding text reads \"Yono Store\" in the admin area (if admin UI has a header/title).",
+        "No user-facing site branding strings show the old/placeholder name."
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "text": "Set default HTML document metadata to use \"Yono Store\" (at minimum: document title) so browser tabs and shared previews use the updated site name where applicable.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages-3"
+        ],
+        "quotes": [
+          "Retry with website name Yono Store"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The browser tab title defaults to \"Yono Store\" on initial load.",
+        "Routes that do not override page metadata still show \"Yono Store\" as the base title."
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "text": "Update any in-repo user-facing documentation or on-screen onboarding/help text (if present) to refer to the website as \"Yono Store\".",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "recent-messages-3"
+        ],
+        "quotes": [
+          "Retry with website name Yono Store"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Any user-facing documentation pages or visible help text (if present) reference \"Yono Store\" and not a placeholder name."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing text.",
+    "Do not edit files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any files in frontend/src/components/ui; compose/wrap instead if needed.",
+    "Backend must remain single-actor; keep Motoko logic in backend/main.mo; only add migration.mo if an upgrade requires it."
+  ],
+  "nonGoals": [
+    "Do not add new product features beyond renaming/rebranding to \"Yono Store\".",
+    "Do not change authentication approach or add third-party auth providers.",
+    "Do not introduce non-supported stack components (e.g., Next.js, Node/Express, external databases)."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

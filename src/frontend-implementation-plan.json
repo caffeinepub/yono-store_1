@@ -1,0 +1,52 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Rebrand frontend UI + metadata to “Yono Store”",
+  "requirements": [
+    {
+      "id": "REQ-18",
+      "summary": "Update all visible site branding text in the frontend shell to “Yono Store”.",
+      "acceptanceCriteria": [
+        "The primary visible site branding text reads \"Yono Store\" on public pages.",
+        "The primary visible site branding text reads \"Yono Store\" in the admin area (if admin UI has a header/title).",
+        "No user-facing site branding strings show the old/placeholder name."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Ensure the app shell displays the brand name “Yono Store” in the static HTML (e.g., a minimal non-React brand/header label above the root mount) so it is consistently visible regardless of route (including any admin views rendered inside the app). Also scan/replace any placeholder product/site name strings in this file with “Yono Store”."
+        }
+      ]
+    },
+    {
+      "id": "REQ-19",
+      "summary": "Set default HTML document metadata (at minimum: title) to “Yono Store”.",
+      "acceptanceCriteria": [
+        "The browser tab title defaults to \"Yono Store\" on initial load.",
+        "Routes that do not override page metadata still show \"Yono Store\" as the base title."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Set/confirm the default document <title> is exactly “Yono Store”, and add/update any basic, route-agnostic metadata in the static HTML head (as applicable) so the base title remains “Yono Store” unless explicitly overridden by the app."
+        }
+      ]
+    },
+    {
+      "id": "REQ-20",
+      "summary": "Update any user-facing onboarding/help text in the frontend shell to reference “Yono Store”.",
+      "acceptanceCriteria": [
+        "Any user-facing documentation pages or visible help text (if present) reference \"Yono Store\" and not a placeholder name."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Review any user-visible fallback/help/onboarding text present in the static HTML (e.g., noscript messaging or any inline explanatory text) and ensure it references the site as “Yono Store” with no placeholder/old branding."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-09T12:21:20.750Z",
+  "summary": "The diff primarily adds a full new frontend app shell and multiple pages/components themed around an online casino reviews site branded as \"Yono Store\". Visible UI branding includes \"Yono Store\" in the home hero, header/footer logo alt text, and the admin sidebar. However, there is no clear evidence of updating the default HTML document metadata (e.g., <title>) to \"Yono Store\". The diff also introduces many unrequested new UI features/pages beyond simple rebranding.",
+  "missing_requirements": [
+    {
+      "id": "REQ-19",
+      "requirement": "Set default HTML document metadata to use \"Yono Store\" (at minimum: document title) so browser tabs and shared previews use the updated site name where applicable.",
+      "reason": "No index.html/head/metadata configuration change is shown in the diff summary. The provided files include React entrypoints and pages but do not show any document title or meta tag setup.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added a large multi-page online casino content site (Home, Casinos, Bonuses, News, Complaints, detail pages) with extensive mock data and UI flows.",
+      "reason": "BuildRequest scope is limited to renaming/rebranding to \"Yono Store\"; adding new product features/pages is explicitly a non-goal.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/CasinosPage.tsx",
+        "frontend/src/pages/BonusesPage.tsx",
+        "frontend/src/pages/ComplaintsPage.tsx",
+        "frontend/src/pages/CasinoDetailPage.tsx",
+        "frontend/src/pages/NewsDetailPage.tsx"
+      ]
+    },
+    {
+      "description": "Introduced an admin area (dashboard + listings/news/promo codes/complaints management pages) with UI actions and mock datasets.",
+      "reason": "Not requested; this is new functionality beyond rebranding.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/AdminDashboard.tsx",
+        "frontend/src/pages/AdminListings.tsx",
+        "frontend/src/pages/AdminNews.tsx",
+        "frontend/src/pages/AdminPromoCodes.tsx",
+        "frontend/src/pages/AdminComplaints.tsx"
+      ]
+    },
+    {
+      "description": "Added authentication wiring and actor/query infrastructure (Internet Identity provider usage, actor creation hook, React Query hooks).",
+      "reason": "BuildRequest explicitly states not to change authentication approach or add auth features; also constraints caution against editing certain auth/actor files, while the diff adds new implementations not tied to rebranding.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/components/Header.tsx"
+      ]
+    },
+    {
+      "description": "Added theming and toaster/notification integration (next-themes ThemeProvider and sonner Toaster/toasts).",
+      "reason": "Not requested as part of branding rename; constitutes additional UX functionality.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/BonusesPage.tsx",
+        "frontend/src/pages/ComplaintsPage.tsx",
+        "frontend/src/pages/AdminComplaints.tsx"
+      ]
+    },
+    {
+      "description": "Added/changed backend canister source to an empty Motoko actor (actor {}).",
+      "reason": "BuildRequest did not request backend logic changes; adding a new backend/main.mo (especially empty) is unrelated to rebranding requirements.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.66,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AdminComplaints.tsx",
+    "frontend/src/pages/AdminDashboard.tsx",
+    "frontend/src/pages/AdminListings.tsx",
+    "frontend/src/pages/AdminNews.tsx",
+    "frontend/src/pages/AdminPromoCodes.tsx",
+    "frontend/src/pages/BonusesPage.tsx",
+    "frontend/src/pages/CasinoDetailPage.tsx",
+    "frontend/src/pages/CasinosPage.tsx",
+    "frontend/src/pages/ComplaintsPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/NewsDetailPage.tsx",
+    "frontend/src/pages/NewsPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

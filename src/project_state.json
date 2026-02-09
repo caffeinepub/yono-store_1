@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a professional affiliate + review website for online gaming/casinos (similar to psafebet8.com) with a high-performance Next.js front-end, Node/Express API, database (PostgreSQL or MongoDB), and a robust admin panel for CMS, moderation, analytics, and affiliate click tracking.",
+  "architectural_notes": [
+    "Suggested stack: Next.js frontend with Node.js/Express backend and PostgreSQL or MongoDB database.",
+    "Use SSR for content-heavy pages (reviews/news) for SEO.",
+    "Promo code countdown timers can be implemented client-side with setInterval (no constant refresh).",
+    "Database should support affiliate click-count tracking per referral link.",
+    "Default UI theme: dark mode with vibrant gold/yellow CTAs; mobile-first responsive grid."
+  ],
+  "known_issues": [
+    "Deployment failed (deployment error encountered); user requested a retry build/deploy with updated website name."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-add-public-homepage-ui-with-a-clean-grid-based-layout-showing-recommended-listings-including-play-cta-button-star-rating-display-and-hot-label-where-applicable-make-it-mobile-first-and-performant",
+      "title": "Add public homepage UI with a clean, grid-based layout showing 'Recommended' listings, including: Play CTA button, star rating display, and 'Hot' label where applicable; make it mobile-first and performant.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-public-listing-pages-and-navigation-for-casinos-bonuses-news-and-complaints-including-browse-lists-view-detail-pages-where-applicable-and-category-appropriate-sorting",
+      "title": "Create public listing pages and navigation for: Casinos, Bonuses, News, and Complaints, including: browse lists, view detail pages (where applicable), and category-appropriate sorting.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-promo-code-system-on-the-public-site-promo-code-listings-with-click-to-copy-behavior-and-a-live-countdown-timer-to-expiry-client-side-interval-based",
+      "title": "Implement promo code system on the public site: promo code listings with 'Click to Copy' behavior and a live countdown timer to expiry (client-side interval-based).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-review-detail-pages-for-each-casino-game-listing-including-expert-rating-pros-cons-sections-and-user-reviews-list-submit",
+      "title": "Implement review detail pages for each casino/game listing including: expert rating, pros/cons sections, and user reviews (list + submit).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-global-search-and-filtering-across-listings-supporting-search-by-text-and-filters-sorts-by-category-rating-and-newest-additions",
+      "title": "Add global search and filtering across listings, supporting search by text and filters/sorts by category, rating, and newest additions.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-complaints-public-submission-form-and-backend-workflow-allow-users-to-submit-complaints-and-display-only-approved-complaints-publicly",
+      "title": "Implement Complaints: public submission form and backend workflow; allow users to submit complaints, and display only approved complaints publicly.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-admin-area-with-secure-login-using-internet-identity-and-role-based-access-control-for-admin-only-operations",
+      "title": "Create an Admin area with secure login using Internet Identity and role-based access control for admin-only operations.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-admin-dashboard-that-shows-overview-metrics-total-listings-total-promo-codes-total-articles-total-complaints-by-status-and-referral-click-analytics-top-performing-partners-listings-by-click-count",
+      "title": "Build Admin Dashboard that shows overview metrics: total listings, total promo codes, total articles, total complaints (by status), and referral click analytics (top-performing partners/listings by click count).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-admin-cms-with-full-crud-for-1-casino-game-listings-title-image-referral-link-rating-description-category-recommended-hot-flags-2-promo-codes-code-link-expiry-3-news-blog-articles-title-body-publish-date-tags",
+      "title": "Implement Admin CMS with full CRUD for: (1) Casino/Game listings (title, image, referral link, rating, description, category, recommended/hot flags), (2) Promo codes (code, link, expiry), (3) News/Blog articles (title, body, publish date, tags).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-complaint-moderation-tools-in-admin-list-pending-complaints-approve-reject-and-add-a-reply-that-becomes-visible-on-the-complaint-detail-page-if-approved",
+      "title": "Implement complaint moderation tools in Admin: list pending complaints, approve/reject, and add a reply that becomes visible on the complaint detail page (if approved).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-track-affiliate-referral-clicks-route-outbound-play-clicks-through-a-click-tracking-action-that-increments-count-before-redirecting-to-the-referral-url",
+      "title": "Track affiliate referral clicks: route outbound 'Play' clicks through a click-tracking action that increments count before redirecting to the referral URL.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-seo-focused-metadata-support-for-listing-detail-pages-and-news-article-pages-titles-descriptions-and-social-sharing-meta-tags-to-improve-indexability-within-the-constraints-of-a-client-rendered-react-app",
+      "title": "Add SEO-focused metadata support for listing detail pages and news article pages (titles, descriptions, and social sharing meta tags) to improve indexability within the constraints of a client-rendered React app.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-legal-compliance-footer-across-the-public-site-containing-disclaimer-terms-of-service-and-prominent-18-gambling-awareness-labeling",
+      "title": "Add a legal compliance footer across the public site containing: Disclaimer, Terms of Service, and prominent '18+' gambling awareness labeling.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-visual-theme-dark-mode-by-default-with-vibrant-gold-yellow-accent-color-for-ctas-modern-typography-and-a-cohesive-component-style-across-public-site-and-admin",
+      "title": "Apply a consistent visual theme: dark mode by default with vibrant gold/yellow accent color for CTAs, modern typography, and a cohesive component style across public site and admin.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-initial-app-scaffolding-deliverables-in-repo-clear-project-structure-documentation-and-an-implemented-starter-homepage-and-admin-dashboard-screen-wired-to-real-backend-methods-even-if-seeded-with-sample-data",
+      "title": "Generate and include initial app scaffolding deliverables in-repo: clear project structure documentation and an implemented starter Homepage and Admin Dashboard screen wired to real backend methods (even if seeded with sample data).",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-to-the-frontend-and-render-them-in-the-ui-logo-in-header-placeholder-thumbnails-for-listing-cards-and-an-18-badge-in-the-footer-from-frontend-public-assets-generated-without-routing-images-through-the-backend",
+      "title": "Add generated static image assets to the frontend and render them in the UI (logo in header, placeholder thumbnails for listing cards, and an 18+ badge in the footer) from frontend/public/assets/generated without routing images through the backend.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-set-the-website-app-name-to-yono-store-across-the-frontend-ui-wherever-the-product-name-is-displayed-e-g-header-brand-label-home-page-hero-title-if-present-admin-area-header",
+      "title": "Set the website/app name to \"Yono Store\" across the frontend UI wherever the product name is displayed (e.g., header/brand label, home page hero/title if present, admin area header).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-set-default-html-document-metadata-to-use-yono-store-at-minimum-document-title-so-browser-tabs-and-shared-previews-use-the-updated-site-name-where-applicable",
+      "title": "Set default HTML document metadata to use \"Yono Store\" (at minimum: document title) so browser tabs and shared previews use the updated site name where applicable.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-any-in-repo-user-facing-documentation-or-on-screen-onboarding-help-text-if-present-to-refer-to-the-website-as-yono-store",
+      "title": "Update any in-repo user-facing documentation or on-screen onboarding/help text (if present) to refer to the website as \"Yono Store\".",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with grid-based 'Recommended' listings including Play buttons, star ratings, and Hot labels (dark theme, mobile-first).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Public listing pages for Casinos, Bonuses, News, and a Complaints section (read + submit complaints).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Promo code system: display promo codes with click-to-copy and live countdown timer for expiry.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Review system: detail pages for games/casinos with expert rating, pros/cons, and user reviews.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Global search and filtering (by category, rating, newest).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Admin dashboard with traffic overview and total listings.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Admin CMS with full CRUD for listings, promo codes, and news/blog articles.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Complaint moderation in admin: review, approve, and reply to user-submitted complaints.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Admin authentication (JWT or Auth.js/NextAuth).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Affiliate management: track and display click counts per referral link in admin analytics.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "SEO optimization using SSR for review and news pages.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Legal compliance footer: Disclaimer, Terms of Service, and 18+ gambling awareness labels.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Provide initial deliverables: project structure, database schema, and starter code for Homepage + Admin Dashboard.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Implement backend data models and stable storage for: Listings (casino/game), Promo Codes, News/Blog Articles, Complaints, User Reviews, and Referral Click tracking (click counts per referral link).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Yono Store",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

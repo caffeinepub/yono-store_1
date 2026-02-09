@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-set-the-website-app-name-to-yono-store-across-the-frontend-ui-wherever-the-product-name-is-displayed-e-g-header-brand-label-home-page-hero-title-if-present-admin-area-header",
+      "featureTitle": "Set the website/app name to \"Yono Store\" across the frontend UI wherever the product name is displayed (e.g., header/brand label, home page hero/title if present, admin area header).",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-set-default-html-document-metadata-to-use-yono-store-at-minimum-document-title-so-browser-tabs-and-shared-previews-use-the-updated-site-name-where-applicable",
+      "featureTitle": "Set default HTML document metadata to use \"Yono Store\" (at minimum: document title) so browser tabs and shared previews use the updated site name where applicable.",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-19"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-any-in-repo-user-facing-documentation-or-on-screen-onboarding-help-text-if-present-to-refer-to-the-website-as-yono-store",
+      "featureTitle": "Update any in-repo user-facing documentation or on-screen onboarding/help text (if present) to refer to the website as \"Yono Store\".",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-20"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

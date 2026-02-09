@@ -1,0 +1,22 @@
+{
+  "frontend/index.html": "HTML entry point with \"Yono Store\" as the document title and site name.",
+  "frontend/src/App.tsx": "Main application component with page routing, theme provider, and navigation state management accepting string-based page navigation for type compatibility.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend data fetching (placeholder implementations ready for backend integration).",
+  "frontend/src/components/Header.tsx": "Site header with \"Yono Store\" branding, navigation menu, search, and authentication controls using string-based navigation.",
+  "frontend/src/components/Footer.tsx": "Site footer with \"Yono Store\" branding, links, social media, legal compliance, and 18+ gambling awareness badge.",
+  "frontend/src/pages/HomePage.tsx": "Homepage featuring hero section with \"Yono Store\" branding, recommended casino listings grid, and feature highlights.",
+  "frontend/src/pages/CasinosPage.tsx": "Casino listings page with search, filtering, sorting, and grid display of casino cards.",
+  "frontend/src/pages/BonusesPage.tsx": "Bonuses page displaying promo codes with click-to-copy functionality and live countdown timers.",
+  "frontend/src/pages/NewsPage.tsx": "News and articles page with featured article and grid layout of gaming industry news.",
+  "frontend/src/pages/ComplaintsPage.tsx": "Complaints submission form and display of approved complaints with admin responses.",
+  "frontend/src/pages/CasinoDetailPage.tsx": "Detailed casino review page with ratings, pros/cons, user reviews, and play CTA.",
+  "frontend/src/pages/NewsDetailPage.tsx": "Full news article page with metadata, content, and sharing options.",
+  "frontend/src/pages/AdminDashboard.tsx": "Admin dashboard with \"Yono Store\" branding, statistics overview, and quick action buttons (requires authentication).",
+  "frontend/src/pages/AdminListings.tsx": "Admin interface for managing casino listings with CRUD operations table.",
+  "frontend/src/pages/AdminPromoCodes.tsx": "Admin interface for managing promo codes with expiry tracking.",
+  "frontend/src/pages/AdminNews.tsx": "Admin interface for managing news articles with publish status.",
+  "frontend/src/pages/AdminComplaints.tsx": "Admin interface for reviewing, approving, and responding to user complaints.",
+  "frontend/index.css": "Global styles with OKLCH color system featuring dark theme with vibrant gold/yellow accent colors.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom color tokens, Inter font family, and design system tokens.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring dark theme with vibrant gold/yellow accent colors for the Yono Store application."
+}
